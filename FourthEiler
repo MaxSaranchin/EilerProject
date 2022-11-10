@@ -1,0 +1,24 @@
+
+public class ForthEiler {
+
+	public static void main(String[] args) {
+int max = 0;
+for (int i = 999; i>99; i--) {
+	for (int j = 999; j>99; j--) {
+		if (checkPol(i*j) == true) {
+			if (i*j > max){
+				max = i*j;	
+			}
+		}
+	}
+}
+System.out.println(max);	
+}
+
+public static boolean checkPol(int n){
+	String str = Integer.toString(n);
+	  return str.equalsIgnoreCase(new StringBuilder(str)
+              .reverse().toString());
+		
+	}
+}
